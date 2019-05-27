@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheLiteSharp.Core", "Cach
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheLiteSharp.DataStructures", "CacheLiteSharp.DataStructures\CacheLiteSharp.DataStructures.csproj", "{A377CA77-7CC6-42E4-A1A5-2F3EB306E9EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheLiteSharp.Tests", "CacheLiteSharp.Tests\CacheLiteSharp.Tests.csproj", "{AE28E7DE-4404-48BB-8F4F-A9C313409B39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheLiteSharp.DataStructures.Tests", "CacheLiteSharp.DataStructures.Tests\CacheLiteSharp.DataStructures.Tests.csproj", "{F998DA3C-2C96-48D0-B841-929CA3C4D4AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A377CA77-7CC6-42E4-A1A5-2F3EB306E9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A377CA77-7CC6-42E4-A1A5-2F3EB306E9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A377CA77-7CC6-42E4-A1A5-2F3EB306E9EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE28E7DE-4404-48BB-8F4F-A9C313409B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE28E7DE-4404-48BB-8F4F-A9C313409B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE28E7DE-4404-48BB-8F4F-A9C313409B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE28E7DE-4404-48BB-8F4F-A9C313409B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F998DA3C-2C96-48D0-B841-929CA3C4D4AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F998DA3C-2C96-48D0-B841-929CA3C4D4AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F998DA3C-2C96-48D0-B841-929CA3C4D4AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F998DA3C-2C96-48D0-B841-929CA3C4D4AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
