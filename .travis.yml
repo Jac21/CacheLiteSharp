@@ -1,11 +1,11 @@
 language: csharp
 mono: none
-dotnet: 2.2.0
+sudo: required
+dist: xenial
+dotnet: 2.2
 
-install:
-  - dotnet restore
-  
 script:
+  - dotnet restore
   - dotnet build
   - dotnet test CacheLiteSharp.Core.Tests/CacheLiteSharp.Tests.csproj
   - dotnet test CacheLiteSharp.DataStructures.Tests/CacheLiteSharp.DataStructures.Tests.csproj

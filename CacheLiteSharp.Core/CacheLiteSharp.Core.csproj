@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Authors>Jeremy Cantu</Authors>
+    <PackageProjectUrl>https://github.com/Jac21/CacheLiteSharp.Core</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/Jac21/CacheLiteSharp.Core/master/LICENSE.md</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/Jac21/CacheLiteSharp.Core</RepositoryUrl>
+    <Description>📂 A variety of cache implementations, all in .NET Core C#</Description>
   </PropertyGroup>
 
   <ItemGroup>
