@@ -9,3 +9,7 @@ script:
   - dotnet build
   - dotnet test CacheLiteSharp.Tests/CacheLiteSharp.Tests.csproj
   - dotnet test CacheLiteSharp.DataStructures.Tests/CacheLiteSharp.DataStructures.Tests.csproj
+
+global:
+  - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
+  - DOTNET_CLI_TELEMETRY_OPTOUT=1
