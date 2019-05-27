@@ -1,0 +1,11 @@
+language: csharp
+solution: CacheLiteSharp.Core.sln
+install:
+  - nuget restore CacheLiteSharp.Core.sln
+  - nuget install Microsoft.NET.Test.Sdk -Version 16.1.0
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+script:
+  - msbuild /p:Configuration=Release CacheLiteSharp.DataStructures.sln
+  - msbuild /p:Configuration=Release CacheLiteSharp.Core.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./CacheLiteSharp.Core.Tests/bin/Release/CacheLiteSharp.Core.Tests.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./CacheLiteSharp.DataStructures.Tests/bin/Release/CacheLiteSharp.Core.Tests.dll
