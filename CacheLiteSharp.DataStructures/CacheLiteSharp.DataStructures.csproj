@@ -4,8 +4,4 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\CacheLiteSharp.DataStructures\CacheLiteSharp.DataStructures.csproj" />
-  </ItemGroup>
-
 </Project>
