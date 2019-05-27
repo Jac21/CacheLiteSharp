@@ -7,5 +7,5 @@ dotnet: 2.2
 script:
   - dotnet restore
   - dotnet build
-  - dotnet test CacheLiteSharp.Core.Tests/CacheLiteSharp.Tests.csproj
+  - dotnet test CacheLiteSharp.Tests/CacheLiteSharp.Tests.csproj
   - dotnet test CacheLiteSharp.DataStructures.Tests/CacheLiteSharp.DataStructures.Tests.csproj
