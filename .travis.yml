@@ -7,8 +7,8 @@ dotnet: 2.2
 script:
   - dotnet restore
   - dotnet build
-  - dotnet test CacheLiteSharp.Core.Unit.Tests/CacheLiteSharp.Core.Unit.Tests.csproj
-  - dotnet test CacheLiteSharp.DataStructures.Unit.Tests/CacheLiteSharp.DataStructures.Unit.Tests.csproj
+  - dotnet test CacheLiteSharp.Tests/CacheLiteSharp.Core.Unit.Tests.csproj
+  - dotnet test CacheLiteSharp.DataStructures.Tests/CacheLiteSharp.Core.DataStructures.Unit.Tests.csproj
 
 global:
   - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
