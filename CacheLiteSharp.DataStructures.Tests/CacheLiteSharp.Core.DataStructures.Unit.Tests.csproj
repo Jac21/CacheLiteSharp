@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CacheLiteSharp.DataStructures\CacheLiteSharp.DataStructures.csproj" />
+    <ProjectReference Include="..\CacheLiteSharp.DataStructures\CacheLiteSharp.Core.DataStructures.csproj" />
   </ItemGroup>
 
 </Project>

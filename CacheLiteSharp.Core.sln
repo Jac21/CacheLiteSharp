@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheLiteSharp.Core", "CacheLiteSharp.Core\CacheLiteSharp.Core.csproj", "{E5D3D202-EB9B-4AE7-AF79-53E95ED25324}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheLiteSharp.Core", "CacheLiteSharp.Core\CacheLiteSharp.Core.csproj", "{E5D3D202-EB9B-4AE7-AF79-53E95ED25324}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheLiteSharp.DataStructures", "CacheLiteSharp.DataStructures\CacheLiteSharp.DataStructures.csproj", "{A377CA77-7CC6-42E4-A1A5-2F3EB306E9EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheLiteSharp.Core.DataStructures", "CacheLiteSharp.DataStructures\CacheLiteSharp.Core.DataStructures.csproj", "{A377CA77-7CC6-42E4-A1A5-2F3EB306E9EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheLiteSharp.Tests", "CacheLiteSharp.Tests\CacheLiteSharp.Tests.csproj", "{AE28E7DE-4404-48BB-8F4F-A9C313409B39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheLiteSharp.Core.Unit.Tests", "CacheLiteSharp.Tests\CacheLiteSharp.Core.Unit.Tests.csproj", "{AE28E7DE-4404-48BB-8F4F-A9C313409B39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheLiteSharp.DataStructures.Tests", "CacheLiteSharp.DataStructures.Tests\CacheLiteSharp.DataStructures.Tests.csproj", "{F998DA3C-2C96-48D0-B841-929CA3C4D4AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheLiteSharp.Core.DataStructures.Unit.Tests", "CacheLiteSharp.DataStructures.Tests\CacheLiteSharp.Core.DataStructures.Unit.Tests.csproj", "{F998DA3C-2C96-48D0-B841-929CA3C4D4AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
