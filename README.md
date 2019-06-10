@@ -1,5 +1,5 @@
 ![logo](https://raw.githubusercontent.com/Jac21/CacheLiteSharp.Core/master/media/logo_transparent.png)
-[![Build Status](https://travis-ci.org/Jac21/CacheLiteSharp.svg?branch=master)](https://travis-ci.org/Jac21/CacheLiteSharp.Core)
+[![Build Status](https://travis-ci.org/Jac21/CacheLiteSharp.Core.svg?branch=master)](https://travis-ci.org/Jac21/CacheLiteSharp.Core)
 
 📂 A variety of cache implementations, all in .NET Core C#
 
