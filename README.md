@@ -1,5 +1,8 @@
 ![logo](https://raw.githubusercontent.com/Jac21/CacheLiteSharp.Core/master/media/logo_transparent.png)
+
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Build Status](https://travis-ci.org/Jac21/CacheLiteSharp.Core.svg?branch=master)](https://travis-ci.org/Jac21/CacheLiteSharp.Core)
+[![donate](https://img.shields.io/badge/%24-Buy%20me%20a%20coffee-ff69b4.svg)](https://www.buymeacoffee.com/jac21)
 
 📂 A variety of cache implementations, all in .NET Core C#
 
