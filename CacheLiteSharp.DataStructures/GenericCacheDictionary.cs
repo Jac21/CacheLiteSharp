@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CacheLiteSharp.DataStructures
+namespace CacheLiteSharp.Core.DataStructures
 {
     /// <summary>
     /// Basic dictionary-based data-structure, used to back ICache implementing cache classes

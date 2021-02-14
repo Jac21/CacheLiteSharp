@@ -1,4 +1,4 @@
-﻿namespace CacheLiteSharp.ICache
+﻿namespace CacheLiteSharp.Core.Interfaces
 {
     /// <summary>
     /// Cache interface, used to decorate implementing classes. There are some basic operations on a cache, 

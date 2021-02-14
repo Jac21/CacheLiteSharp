@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CacheLiteSharp.DataStructures
+namespace CacheLiteSharp.Core.DataStructures
 {
     /// <summary>
     /// Basic Java/Kotlin-like LinkedHashMap data-structure, used to back particular facets

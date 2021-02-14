@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Shouldly;
 
-namespace CacheLiteSharp.Tests.PerpetualCacheTests
+namespace CacheLiteSharp.Core.Unit.Tests.PerpetualCacheTests
 {
     /// <summary>
     /// PerpetualCache exposed methods test
@@ -12,39 +12,39 @@ namespace CacheLiteSharp.Tests.PerpetualCacheTests
         private const string Key = "key";
         private const string Value = "Frequently used value from the database";
 
-        private readonly PerpetualCache<string> perpetualCache = new PerpetualCache<string>();
+        private readonly PerpetualCache<string> _perpetualCache = new PerpetualCache<string>();
 
         [Test]
         public void PerpetualCacheSetAndGetTest()
         {
             // Act
-            perpetualCache.Set(Key, Value);
+            _perpetualCache.Set(Key, Value);
 
             // Assert
-            perpetualCache.Get(Key).ShouldBe(Value);
+            _perpetualCache.Get(Key).ShouldBe(Value);
         }
 
         [Test]
         public void PerpetualCacheSizeTest()
         {
             // Act
-            perpetualCache.Set(Key, Value);
+            _perpetualCache.Set(Key, Value);
 
             // Assert
-            perpetualCache.Size.ShouldBe(1);
+            _perpetualCache.Size.ShouldBe(1);
         }
 
         [Test]
         public void PerpetualCacheRemoveSingleTest()
         {
             // Act
-            perpetualCache.Set(Key, Value);
+            _perpetualCache.Set(Key, Value);
 
-            perpetualCache.Remove(Key);
+            _perpetualCache.Remove(Key);
 
             // Assert
-            perpetualCache.Size.ShouldBe(0);
-            perpetualCache.Get(Key).ShouldBe(null);
+            _perpetualCache.Size.ShouldBe(0);
+            _perpetualCache.Get(Key).ShouldBe(null);
         }
 
         [Test]
@@ -54,21 +54,21 @@ namespace CacheLiteSharp.Tests.PerpetualCacheTests
             const string keyTwo = "keyTwo";
             const string valueTwo = "Another frequently used value from the database";
 
-            perpetualCache.Set(Key, Value);
-            perpetualCache.Set(keyTwo, valueTwo);
+            _perpetualCache.Set(Key, Value);
+            _perpetualCache.Set(keyTwo, valueTwo);
 
             // Act
-            perpetualCache.Size.ShouldBe(2);
-            perpetualCache.Clear();
+            _perpetualCache.Size.ShouldBe(2);
+            _perpetualCache.Clear();
 
             // Assert
-            perpetualCache.Size.ShouldBe(0);
+            _perpetualCache.Size.ShouldBe(0);
         }
 
         [TearDown]
         public void TearDown()
         {
-            perpetualCache.Clear();
+            _perpetualCache.Clear();
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
-using CacheLiteSharp.DataStructures;
-using CacheLiteSharp.ICache;
+using CacheLiteSharp.Core.DataStructures;
+using CacheLiteSharp.Core.Interfaces;
 
-namespace CacheLiteSharp
+namespace CacheLiteSharp.Core
 {
     /// <summary>
     /// Generic cache that flushes values based on given interval in minutes, cache is recycled every interval's millisecond representation
@@ -10,11 +10,11 @@ namespace CacheLiteSharp
     /// <typeparam name="T"></typeparam>
     public class ExpirableCache<T> : ICache<T> where T : class
     {
-        private readonly GenericCacheDictionary cache = new GenericCacheDictionary();
+        private readonly GenericCacheDictionary _cache = new GenericCacheDictionary();
 
-        private readonly double flushInterval;
+        private readonly double _flushInterval;
 
-        private readonly long lastFlushTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+        private readonly long _lastFlushTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
 
         /// <summary>
         /// /// Generic cache that flushes values based on given interval in minutes, cache is recycled every interval's millisecond representation
@@ -22,13 +22,13 @@ namespace CacheLiteSharp
         /// <param name="cacheExpirationFlushIntervalInMinutes"></param>
         public ExpirableCache(double cacheExpirationFlushIntervalInMinutes)
         {
-            flushInterval = TimeSpan.FromMinutes(cacheExpirationFlushIntervalInMinutes).TotalMilliseconds;
+            _flushInterval = TimeSpan.FromMinutes(cacheExpirationFlushIntervalInMinutes).TotalMilliseconds;
         }
 
         /// <summary>
         /// Obtain the size of the Cache in integer form
         /// </summary>
-        public int Size => cache.Size;
+        public int Size => _cache.Size;
 
         /// <summary>
         /// Set a generic cache value based on a string key 
@@ -37,7 +37,7 @@ namespace CacheLiteSharp
         /// <param name="value"></param>
         public void Set(string key, T value)
         {
-            cache.Dictionary[key] = value;
+            _cache.Dictionary[key] = value;
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace CacheLiteSharp
         public T Get(string key)
         {
             Recycle();
-            return cache.GetValue<T>(key);
+            return _cache.GetValue<T>(key);
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace CacheLiteSharp
         public T Remove(string key)
         {
             Recycle();
-            return cache.Remove<T>(key);
+            return _cache.Remove<T>(key);
         }
 
         /// <summary>
@@ -66,20 +66,20 @@ namespace CacheLiteSharp
         /// </summary>
         public void Clear()
         {
-            cache.Clear();
+            _cache.Clear();
         }
 
         private void Recycle()
         {
-            var shouldRecycle = DateTimeOffset.Now.ToUnixTimeMilliseconds() - lastFlushTime >=
-                                TimeSpan.FromMilliseconds(flushInterval).TotalMilliseconds;
+            var shouldRecycle = DateTimeOffset.Now.ToUnixTimeMilliseconds() - _lastFlushTime >=
+                                TimeSpan.FromMilliseconds(_flushInterval).TotalMilliseconds;
 
             if (!shouldRecycle)
             {
                 return;
             }
 
-            cache.Clear();
+            _cache.Clear();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Shouldly;
 
-namespace CacheLiteSharp.Tests.LeastRecentlyUsedCacheTests
+namespace CacheLiteSharp.Core.Unit.Tests.LeastRecentlyUsedCacheTests
 {
     /// <summary>
     /// LeastRecentlyUsedCache exposed methods test
@@ -12,40 +12,40 @@ namespace CacheLiteSharp.Tests.LeastRecentlyUsedCacheTests
         private const string Key = "key";
         private const string Value = "Frequently used value from the database";
 
-        private readonly LeastRecentlyUsedCache<string> leastRecentlyUsedCache =
+        private readonly LeastRecentlyUsedCache<string> _leastRecentlyUsedCache =
             new LeastRecentlyUsedCache<string>(50);
 
         [Test]
         public void LeastRecentlyUsedCacheSetAndGetTest()
         {
             // Act
-            leastRecentlyUsedCache.Set(Key, Value);
+            _leastRecentlyUsedCache.Set(Key, Value);
 
             // Assert
-            leastRecentlyUsedCache.Get(Key).ShouldBe(Value);
+            _leastRecentlyUsedCache.Get(Key).ShouldBe(Value);
         }
 
         [Test]
         public void LeastRecentlyUsedCacheSizeTest()
         {
             // Act
-            leastRecentlyUsedCache.Set(Key, Value);
+            _leastRecentlyUsedCache.Set(Key, Value);
 
             // Assert
-            leastRecentlyUsedCache.Size.ShouldBe(1);
+            _leastRecentlyUsedCache.Size.ShouldBe(1);
         }
 
         [Test]
         public void LeastRecentlyUsedCacheRemoveSingleTest()
         {
             // Act
-            leastRecentlyUsedCache.Set(Key, Value);
+            _leastRecentlyUsedCache.Set(Key, Value);
 
-            leastRecentlyUsedCache.Remove(Key);
+            _leastRecentlyUsedCache.Remove(Key);
 
             // Assert
-            leastRecentlyUsedCache.Size.ShouldBe(0);
-            leastRecentlyUsedCache.Get(Key).ShouldBe(null);
+            _leastRecentlyUsedCache.Size.ShouldBe(0);
+            _leastRecentlyUsedCache.Get(Key).ShouldBe(null);
         }
 
         [Test]
@@ -54,11 +54,11 @@ namespace CacheLiteSharp.Tests.LeastRecentlyUsedCacheTests
             // Act
             for (int i = 0; i <= 51; i++)
             {
-                leastRecentlyUsedCache.Set(Key + i, Value + i);
+                _leastRecentlyUsedCache.Set(Key + i, Value + i);
             }
 
             // Assert
-            leastRecentlyUsedCache.Size.ShouldBe(50);
+            _leastRecentlyUsedCache.Size.ShouldBe(50);
         }
 
         [Test]
@@ -67,21 +67,21 @@ namespace CacheLiteSharp.Tests.LeastRecentlyUsedCacheTests
             const string keyTwo = "keyTwo";
             const string valueTwo = "Another frequently used value from the database";
 
-            leastRecentlyUsedCache.Set(Key, Value);
-            leastRecentlyUsedCache.Set(keyTwo, valueTwo);
+            _leastRecentlyUsedCache.Set(Key, Value);
+            _leastRecentlyUsedCache.Set(keyTwo, valueTwo);
 
             // Act
-            leastRecentlyUsedCache.Size.ShouldBe(2);
-            leastRecentlyUsedCache.Clear();
+            _leastRecentlyUsedCache.Size.ShouldBe(2);
+            _leastRecentlyUsedCache.Clear();
 
             // Assert
-            leastRecentlyUsedCache.Size.ShouldBe(0);
+            _leastRecentlyUsedCache.Size.ShouldBe(0);
         }
 
         [TearDown]
         public void TearDown()
         {
-            leastRecentlyUsedCache.Clear();
+            _leastRecentlyUsedCache.Clear();
         }
     }
 }

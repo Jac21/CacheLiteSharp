@@ -1,8 +1,7 @@
-﻿using CacheLiteSharp.DataStructures;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Shouldly;
 
-namespace CacheLiteSharp.Tests.DataStructureTests
+namespace CacheLiteSharp.Core.DataStructures.Unit.Tests
 {
     /// <summary>
     /// GenericCacheDictionary data structure basic operations test
@@ -13,41 +12,41 @@ namespace CacheLiteSharp.Tests.DataStructureTests
         private const string Key = "key";
         private const string Value = "Frequently used value from the database";
 
-        private readonly GenericCacheDictionary cache = new GenericCacheDictionary();
+        private readonly GenericCacheDictionary _cache = new GenericCacheDictionary();
 
         [Test]
         public void GenericCacheDictionaryAddAndGetTest()
         {
             // Act
-            cache.Add(Key, Value);
+            _cache.Add(Key, Value);
 
             // Assert
-            cache.GetValue<string>(Key).ShouldBe("Frequently used value from the database");
+            _cache.GetValue<string>(Key).ShouldBe("Frequently used value from the database");
         }
 
         [Test]
         public void GenericCacheDictionarySizeTest()
         {
             // Act
-            cache.Add(Key, Value);
+            _cache.Add(Key, Value);
 
             // Assert
-            cache.Size.ShouldBe(1);
+            _cache.Size.ShouldBe(1);
         }
 
         [Test]
         public void GenericCacheDictionaryRemoveSingleTest()
         {
-            cache.Add(Key, Value);
-            cache.Size.ShouldBe(1);
-            cache.GetValue<string>(Key).ShouldBe("Frequently used value from the database");
+            _cache.Add(Key, Value);
+            _cache.Size.ShouldBe(1);
+            _cache.GetValue<string>(Key).ShouldBe("Frequently used value from the database");
 
             // Act
-            cache.Remove<string>(Key);
+            _cache.Remove<string>(Key);
 
             // Assert
-            cache.Size.ShouldBe(0);
-            cache.GetValue<string>(Key).ShouldBe(null);
+            _cache.Size.ShouldBe(0);
+            _cache.GetValue<string>(Key).ShouldBe(null);
         }
 
         [Test]
@@ -57,22 +56,22 @@ namespace CacheLiteSharp.Tests.DataStructureTests
             const string keyTwo = "keyTwo";
             const string valueTwo = "Another frequently used value from the database";
 
-            cache.Add(Key, Value);
-            cache.Add(keyTwo, valueTwo);
+            _cache.Add(Key, Value);
+            _cache.Add(keyTwo, valueTwo);
 
-            cache.Size.ShouldBe(2);
+            _cache.Size.ShouldBe(2);
 
             // Act
-            cache.Clear();
+            _cache.Clear();
 
             // Assert
-            cache.Size.ShouldBe(0);
+            _cache.Size.ShouldBe(0);
         }
 
         [TearDown]
         public void TearDown()
         {
-            cache.Clear();
+            _cache.Clear();
         }
     }
 }

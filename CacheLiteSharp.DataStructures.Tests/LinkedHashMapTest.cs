@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using CacheLiteSharp.DataStructures;
+using CacheLiteSharp.Core.DataStructures;
 using NUnit.Framework;
 using Shouldly;
 

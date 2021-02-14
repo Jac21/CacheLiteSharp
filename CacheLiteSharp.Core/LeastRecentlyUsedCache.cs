@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using CacheLiteSharp.DataStructures;
-using CacheLiteSharp.ICache;
+using CacheLiteSharp.Core.DataStructures;
+using CacheLiteSharp.Core.Interfaces;
 
-namespace CacheLiteSharp
+namespace CacheLiteSharp.Core
 {
     /// <summary>
     /// Generic cache that employs the Least Recently Used flush strategy, 
@@ -12,13 +12,13 @@ namespace CacheLiteSharp
     /// <typeparam name="T"></typeparam>
     public class LeastRecentlyUsedCache<T> : ICache<T> where T : class
     {
-        private readonly GenericCacheDictionary cache = new GenericCacheDictionary();
+        private readonly GenericCacheDictionary _cache = new GenericCacheDictionary();
 
-        private readonly int minimalSize;
+        private readonly int _minimalSize;
 
-        private readonly LinkedHashMap<string, T> keyMap = new LinkedHashMap<string, T>();
+        private readonly LinkedHashMap<string, T> _keyMap = new LinkedHashMap<string, T>();
 
-        private LinkedListNode<Tuple<T, string>> eldestKeyToRemove;
+        private LinkedListNode<Tuple<T, string>> _eldestKeyToRemove;
 
         private const int DefaultSize = 100;
 
@@ -31,13 +31,13 @@ namespace CacheLiteSharp
         /// 
         public LeastRecentlyUsedCache(int minimalSize = DefaultSize)
         {
-            this.minimalSize = minimalSize;
+            this._minimalSize = minimalSize;
         }
 
         /// <summary>
         /// Obtain the size of the Cache in integer form
         /// </summary>
-        public int Size => cache.Size;
+        public int Size => _cache.Size;
 
         /// <summary>
         /// Set a generic cache value based on a string key. Cycle values if size exceeds minimal size argument, remove eldest entry as such
@@ -46,9 +46,9 @@ namespace CacheLiteSharp
         /// <param name="value"></param>
         public void Set(string key, T value)
         {
-            cache.Dictionary[key] = keyMap[key] = value;
+            _cache.Dictionary[key] = _keyMap[key] = value;
 
-            if (RemovedEldestEntry(keyMap))
+            if (RemovedEldestEntry(_keyMap))
             {
                 CycleKeyMap();
             }
@@ -61,7 +61,7 @@ namespace CacheLiteSharp
         /// <returns></returns>
         public T Get(string key)
         {
-            return cache.GetValue<T>(key);
+            return _cache.GetValue<T>(key);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace CacheLiteSharp
         /// <returns></returns>
         public T Remove(string key)
         {
-            return cache.Remove<T>(key);
+            return _cache.Remove<T>(key);
         }
 
         /// <summary>
@@ -79,18 +79,18 @@ namespace CacheLiteSharp
         /// </summary>
         public void Clear()
         {
-            keyMap.Clear();
-            cache.Clear();
+            _keyMap.Clear();
+            _cache.Clear();
         }
 
         private void CycleKeyMap()
         {
-            if (eldestKeyToRemove != null)
+            if (_eldestKeyToRemove != null)
             {
-                cache.Dictionary.Remove(eldestKeyToRemove.List.Last.Value.Item2);
+                _cache.Dictionary.Remove(_eldestKeyToRemove.List.Last.Value.Item2);
             }
 
-            eldestKeyToRemove = null;
+            _eldestKeyToRemove = null;
         }
 
         /// <summary>
@@ -100,11 +100,11 @@ namespace CacheLiteSharp
         /// <returns></returns>
         private bool RemovedEldestEntry(LinkedHashMap<string, T> eldest)
         {
-            var tooManyCachedItems = Size > minimalSize;
+            var tooManyCachedItems = Size > _minimalSize;
 
             if (tooManyCachedItems)
             {
-                eldestKeyToRemove = eldest.LinkedHashMapLinkedList.Last;
+                _eldestKeyToRemove = eldest.LinkedHashMapLinkedList.Last;
             }
 
             return tooManyCachedItems;

@@ -1,7 +1,7 @@
-﻿using CacheLiteSharp.DataStructures;
-using CacheLiteSharp.ICache;
+﻿using CacheLiteSharp.Core.DataStructures;
+using CacheLiteSharp.Core.Interfaces;
 
-namespace CacheLiteSharp
+namespace CacheLiteSharp.Core
 {
     /// <summary>
     /// Basic generic cache, caches items forever until removed manually
@@ -9,12 +9,12 @@ namespace CacheLiteSharp
     /// <typeparam name="T"></typeparam>
     public class PerpetualCache<T> : ICache<T> where T : class
     {
-        private readonly GenericCacheDictionary cache = new GenericCacheDictionary();
+        private readonly GenericCacheDictionary _cache = new GenericCacheDictionary();
 
         /// <summary>
         /// Obtain the size of the Cache in integer form
         /// </summary>
-        public int Size => cache.Size;
+        public int Size => _cache.Size;
 
         /// <summary>
         /// Set a generic cache value based on a string key 
@@ -23,7 +23,7 @@ namespace CacheLiteSharp
         /// <param name="value"></param>
         public void Set(string key, T value)
         {
-            cache.Dictionary[key] = value;
+            _cache.Dictionary[key] = value;
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace CacheLiteSharp
         /// <returns></returns>
         public T Get(string key)
         {
-            return cache.GetValue<T>(key);
+            return _cache.GetValue<T>(key);
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace CacheLiteSharp
         /// <returns></returns>
         public T Remove(string key)
         {
-            return cache.Remove<T>(key);
+            return _cache.Remove<T>(key);
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace CacheLiteSharp
         /// </summary>
         public void Clear()
         {
-            cache.Clear();
+            _cache.Clear();
         }
     }
 }
