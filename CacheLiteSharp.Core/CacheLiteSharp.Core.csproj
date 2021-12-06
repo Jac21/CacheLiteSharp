@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <Authors>Jeremy Cantu</Authors>
     <PackageProjectUrl>https://github.com/Jac21/CacheLiteSharp.Core</PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/Jac21/CacheLiteSharp.Core/master/LICENSE.md</PackageLicenseUrl>
