@@ -6,26 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00c728b1-e18c-48ac-bd6c-00fb0d1bdc23" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.Core/CacheLiteSharp.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.Core/CacheLiteSharp.Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.Core/CacheLiteSharp.Core.nuspec" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.Core/CacheLiteSharp.Core.nuspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.Core/ExpirableCache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.Core/ExpirableCache.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.Core/GenericCacheDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.Core/GenericCacheDictionary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.Core/LeastRecentlyUsedCache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.Core/LeastRecentlyUsedCache.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.DataStructures.Tests/CacheLiteSharp.Core.DataStructures.Unit.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.DataStructures.Tests/CacheLiteSharp.Core.DataStructures.Unit.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.DataStructures.Tests/GenericCacheDictionaryTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.DataStructures.Tests/GenericCacheDictionaryTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.DataStructures.Tests/LinkedHashMapTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.DataStructures.Tests/LinkedHashMapTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.DataStructures/CacheLiteSharp.Core.DataStructures.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.DataStructures/CacheLiteSharp.Core.DataStructures.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.DataStructures/GenericCacheDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.DataStructures/GenericCacheDictionary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.DataStructures/LinkedHashMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.DataStructures/LinkedHashMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.Tests/CacheLiteSharp.Core.Unit.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.Tests/CacheLiteSharp.Core.Unit.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.Tests/LeastRecentlyUsedCacheTests/LeastRecentlyUsedCacheTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.Tests/LeastRecentlyUsedCacheTests/LeastRecentlyUsedCacheTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CacheLiteSharp.Tests/PerpetualCacheTests/PerpetualCacheTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CacheLiteSharp.Tests/PerpetualCacheTests/PerpetualCacheTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665701474866</updated>
-      <workItem from="1665701478943" duration="325000" />
+      <workItem from="1665701478943" duration="756000" />
     </task>
     <servers />
   </component>
