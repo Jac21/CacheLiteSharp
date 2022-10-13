@@ -10,7 +10,7 @@ namespace CacheLiteSharp.Core.DataStructures
     /// </remarks>
     public class GenericCacheDictionary
     {
-        public Dictionary<string, object> Dictionary = new Dictionary<string, object>();
+        public readonly Dictionary<string, object> Dictionary = new();
 
         public int Size => Dictionary.Count;
 

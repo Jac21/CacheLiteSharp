@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using CacheLiteSharp.Core.DataStructures;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Shouldly;
 
-namespace CacheLiteSharp.Tests.DataStructureTests
+namespace CacheLiteSharp.Core.DataStructures.Unit.Tests
 {
     /// <summary>
     /// LinkedHashMapTest data structure basic operations test
@@ -19,9 +16,9 @@ namespace CacheLiteSharp.Tests.DataStructureTests
         public void LinkedHashMapSetAndGetTest()
         {
             // Arrange
-            LinkedHashMap<string, string> keyMap = new LinkedHashMap<string, string>();
+            var keyMap = new LinkedHashMap<string, string>();
 
-            LinkedListNode<Tuple<string, string>> value = keyMap.LinkedHashMapLinkedList.First;
+            var value = keyMap.LinkedHashMapLinkedList.First;
 
             // Act
             keyMap.LinkedHashMapDictionary[Key] = value;
@@ -36,7 +33,7 @@ namespace CacheLiteSharp.Tests.DataStructureTests
         public void LinkedHashMapSetAndGetRepeatedKeyTest()
         {
             // Arrange
-            LinkedHashMap<string, string> keyMap = new LinkedHashMap<string, string> { [Key] = Value, [Key] = Value };
+            var keyMap = new LinkedHashMap<string, string> {[Key] = Value, [Key] = Value};
 
             // Act
 
@@ -49,9 +46,9 @@ namespace CacheLiteSharp.Tests.DataStructureTests
         public void LinkedHashMapCountTest()
         {
             // Arrange
-            LinkedHashMap<string, string> keyMap = new LinkedHashMap<string, string>();
+            var keyMap = new LinkedHashMap<string, string>();
 
-            LinkedListNode<Tuple<string, string>> value = keyMap.LinkedHashMapLinkedList.First;
+            var value = keyMap.LinkedHashMapLinkedList.First;
 
             // Act
             keyMap.LinkedHashMapDictionary[Key] = value;
@@ -64,9 +61,9 @@ namespace CacheLiteSharp.Tests.DataStructureTests
         public void LinkedHashMapContainsKeyTest()
         {
             // Arrange
-            LinkedHashMap<string, string> keyMap = new LinkedHashMap<string, string>();
+            var keyMap = new LinkedHashMap<string, string>();
 
-            LinkedListNode<Tuple<string, string>> value = keyMap.LinkedHashMapLinkedList.First;
+            var value = keyMap.LinkedHashMapLinkedList.First;
 
             // Act
             keyMap.LinkedHashMapDictionary[Key] = value;
@@ -79,9 +76,9 @@ namespace CacheLiteSharp.Tests.DataStructureTests
         public void LinkedHashMapPopFirstTest()
         {
             // Arrange
-            LinkedHashMap<string, string> keyMap = new LinkedHashMap<string, string> { [Key] = Value };
+            var keyMap = new LinkedHashMap<string, string> {[Key] = Value};
 
-            LinkedListNode<Tuple<string, string>> value = keyMap.LinkedHashMapLinkedList.First;
+            var value = keyMap.LinkedHashMapLinkedList.First;
 
             // Act
             keyMap.LinkedHashMapDictionary[Key] = value;
@@ -94,9 +91,9 @@ namespace CacheLiteSharp.Tests.DataStructureTests
         public void LinkedHashMapPopFirstDefaultValueTest()
         {
             // Arrange
-            LinkedHashMap<string, string> keyMap = new LinkedHashMap<string, string>();
+            var keyMap = new LinkedHashMap<string, string>();
 
-            LinkedListNode<Tuple<string, string>> value = keyMap.LinkedHashMapLinkedList.First;
+            var value = keyMap.LinkedHashMapLinkedList.First;
 
             // Act
             keyMap.LinkedHashMapDictionary[Key] = value;
@@ -109,9 +106,9 @@ namespace CacheLiteSharp.Tests.DataStructureTests
         public void LinkedHashMapClearTest()
         {
             // Arrange
-            LinkedHashMap<string, string> keyMap = new LinkedHashMap<string, string>();
+            var keyMap = new LinkedHashMap<string, string>();
 
-            LinkedListNode<Tuple<string, string>> value = keyMap.LinkedHashMapLinkedList.First;
+            var value = keyMap.LinkedHashMapLinkedList.First;
 
             keyMap.LinkedHashMapDictionary[Key] = value;
 

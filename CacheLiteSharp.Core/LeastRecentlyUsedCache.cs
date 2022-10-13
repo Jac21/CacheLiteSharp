@@ -12,11 +12,11 @@ namespace CacheLiteSharp.Core
     /// <typeparam name="T"></typeparam>
     public class LeastRecentlyUsedCache<T> : ICache<T> where T : class
     {
-        private readonly GenericCacheDictionary _cache = new GenericCacheDictionary();
+        private readonly GenericCacheDictionary _cache = new();
 
         private readonly int _minimalSize;
 
-        private readonly LinkedHashMap<string, T> _keyMap = new LinkedHashMap<string, T>();
+        private readonly LinkedHashMap<string, T> _keyMap = new();
 
         private LinkedListNode<Tuple<T, string>> _eldestKeyToRemove;
 

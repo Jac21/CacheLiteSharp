@@ -12,8 +12,7 @@ namespace CacheLiteSharp.Core.Unit.Tests.LeastRecentlyUsedCacheTests
         private const string Key = "key";
         private const string Value = "Frequently used value from the database";
 
-        private readonly LeastRecentlyUsedCache<string> _leastRecentlyUsedCache =
-            new LeastRecentlyUsedCache<string>(50);
+        private readonly LeastRecentlyUsedCache<string> _leastRecentlyUsedCache = new(50);
 
         [Test]
         public void LeastRecentlyUsedCacheSetAndGetTest()
@@ -52,7 +51,7 @@ namespace CacheLiteSharp.Core.Unit.Tests.LeastRecentlyUsedCacheTests
         public void LeastRecentlyUsedCacheRemovedEldestEntryTest()
         {
             // Act
-            for (int i = 0; i <= 51; i++)
+            for (var i = 0; i <= 51; i++)
             {
                 _leastRecentlyUsedCache.Set(Key + i, Value + i);
             }

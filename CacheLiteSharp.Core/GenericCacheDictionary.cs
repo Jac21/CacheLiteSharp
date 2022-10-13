@@ -9,7 +9,7 @@ namespace CacheLiteSharp.Core
     /// <typeparam name="T"></typeparam>
     public class PerpetualCache<T> : ICache<T> where T : class
     {
-        private readonly GenericCacheDictionary _cache = new GenericCacheDictionary();
+        private readonly GenericCacheDictionary _cache = new();
 
         /// <summary>
         /// Obtain the size of the Cache in integer form

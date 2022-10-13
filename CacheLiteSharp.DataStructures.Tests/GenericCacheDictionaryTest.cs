@@ -12,7 +12,7 @@ namespace CacheLiteSharp.Core.DataStructures.Unit.Tests
         private const string Key = "key";
         private const string Value = "Frequently used value from the database";
 
-        private readonly GenericCacheDictionary _cache = new GenericCacheDictionary();
+        private readonly GenericCacheDictionary _cache = new();
 
         [Test]
         public void GenericCacheDictionaryAddAndGetTest()

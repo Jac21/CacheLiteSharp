@@ -12,7 +12,7 @@ namespace CacheLiteSharp.Core.Unit.Tests.PerpetualCacheTests
         private const string Key = "key";
         private const string Value = "Frequently used value from the database";
 
-        private readonly PerpetualCache<string> _perpetualCache = new PerpetualCache<string>();
+        private readonly PerpetualCache<string> _perpetualCache = new();
 
         [Test]
         public void PerpetualCacheSetAndGetTest()

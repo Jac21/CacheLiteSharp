@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Authors>Jeremy Cantu</Authors>
     <PackageProjectUrl>https://github.com/Jac21/CacheLiteSharp.Core</PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/Jac21/CacheLiteSharp.Core/master/LICENSE.md</PackageLicenseUrl>
@@ -9,6 +9,8 @@
     <Description>📂 A variety of cache implementations, all in .NET Core C#</Description>
     <Version>2.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>CacheLiteSharp</PackageId>
+    <PackageVersion>6.0.0</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>

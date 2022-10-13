@@ -10,7 +10,7 @@ namespace CacheLiteSharp.Core
     /// <typeparam name="T"></typeparam>
     public class ExpirableCache<T> : ICache<T> where T : class
     {
-        private readonly GenericCacheDictionary _cache = new GenericCacheDictionary();
+        private readonly GenericCacheDictionary _cache = new();
 
         private readonly double _flushInterval;
 

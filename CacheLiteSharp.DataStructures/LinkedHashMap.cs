@@ -14,10 +14,9 @@ namespace CacheLiteSharp.Core.DataStructures
     /// <typeparam name="TU"></typeparam>
     public class LinkedHashMap<T, TU>
     {
-        public readonly Dictionary<T, LinkedListNode<Tuple<TU, T>>> LinkedHashMapDictionary =
-            new Dictionary<T, LinkedListNode<Tuple<TU, T>>>();
+        public readonly Dictionary<T, LinkedListNode<Tuple<TU, T>>> LinkedHashMapDictionary = new();
 
-        public readonly LinkedList<Tuple<TU, T>> LinkedHashMapLinkedList = new LinkedList<Tuple<TU, T>>();
+        public readonly LinkedList<Tuple<TU, T>> LinkedHashMapLinkedList = new();
 
         public int Count => LinkedHashMapDictionary.Count;
 
@@ -47,12 +46,16 @@ namespace CacheLiteSharp.Core.DataStructures
             if (LinkedHashMapLinkedList.Count != 0)
             {
                 var node = LinkedHashMapLinkedList.First;
-                LinkedHashMapLinkedList.Remove(node);
-                LinkedHashMapDictionary.Remove(node.Value.Item2);
-                return node.Value.Item1;
+
+                if (node != null)
+                {
+                    LinkedHashMapLinkedList.Remove(node);
+                    LinkedHashMapDictionary.Remove(node.Value.Item2);
+                    return node.Value.Item1;
+                }
             }
 
-            return default(TU);
+            return default;
         }
 
         public void Clear()
