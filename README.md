@@ -16,7 +16,7 @@ This is mainly an academic exercise, however, feel entirely free to use this cla
 ## Installation
 
 ```
-PM> Install-Package CacheLiteSharp.Core -Version 6.0.0   
+PM> Install-Package CacheLiteSharp.Core -Version 6.0.1
 ```
 
 ## Interface

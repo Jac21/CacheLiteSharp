@@ -5,10 +5,7 @@
     <projectFile>CacheLiteSharp.Tests/CacheLiteSharp.Core.Unit.Tests.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00c728b1-e18c-48ac-bd6c-00fb0d1bdc23" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/aws.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CacheLiteSharp.Core/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="00c728b1-e18c-48ac-bd6c-00fb0d1bdc23" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665701474866</updated>
       <workItem from="1665701478943" duration="756000" />
-      <workItem from="1665941390946" duration="598000" />
+      <workItem from="1665941390946" duration="754000" />
     </task>
     <servers />
   </component>
